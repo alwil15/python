@@ -73,9 +73,6 @@ class Television:
         Method to decrease the tv volume.
         '''
         if self.__status:
-            self.__muted = False
-            if self.__volume > Television.MIN_VOLUME:
-                self.__volume -= 1
             if self.__muted:
                 if self.__volume > Television.MIN_VOLUME:
                     self.__muted = False
