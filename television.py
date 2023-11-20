@@ -4,7 +4,7 @@ class Television:
     MIN_CHANNEL = 0
     MAX_CHANNEL = 3
 
-    def __init__(self):
+    def __init__(self)-> None:
         '''
         Default local initialization varaibles
         '''
@@ -73,13 +73,9 @@ class Television:
         Method to decrease the tv volume.
         '''
         if self.__status:
-            if self.__muted:
-                if self.__volume > Television.MIN_VOLUME:
-                    self.__muted = False
-                    self.__volume -= 1
-            else:
-                if self.__volume > Television.MIN_VOLUME:
-                    self.__volume -= 1
+            self.__muted = False
+            if self.__volume > Television.MIN_VOLUME:
+                self.__volume -= 1
 
     def __str__(self) -> str:
         '''
